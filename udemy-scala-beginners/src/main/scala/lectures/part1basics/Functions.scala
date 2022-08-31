@@ -39,7 +39,8 @@ object Functions extends App {
   // 1.
   def greetingFunction(name: String, age: Int): Unit =
     if (age < 2) println("Hello my name is $name and I am $age year old")
-    else println("Hello my name is $name and I am $age years old")
+    else println(s"Hello my name is $name and I am $age years old")
+  greetingFunction("David", 5)
 
   // 2.
   def factorialFunction(num: Int, fac: Int = 1): Int =
@@ -60,6 +61,12 @@ object Functions extends App {
     }
     else fac
 
+  // Much simpler method
+  def simplerFactorial(num: Int): Int =
+    if (num <= 0) 1
+    else num * simplerFactorial(num - 1)
+
+  print(simplerFactorial(12))
 
   println(factorialFunction(5))
 
@@ -74,9 +81,15 @@ object Functions extends App {
       val newNum1 = num2
       val newNum2 = num1 + num2
       fibonacciLimit(theLimit, newNum1, newNum2)
-    }
+    } // This solution is tail recursive meaning the last call is recursive
+
+  // Much simpler way
+  def simplerFibonacci(num: Int): Int =
+    if (num <= 2) 1
+    else simplerFactorial(num - 1) + simplerFibonacci(num - 2)
 
   println(fibonacciLimit(100))
+  println(simplerFibonacci(10))
 
 
   // 4.
@@ -86,7 +99,6 @@ object Functions extends App {
 
   def primeChecker(numToCheck: Int, checkingValue: Int = 2): Boolean =
     val maxNum: Double = sqrt(numToCheck)
-
     if (checkingValue <= maxNum) {
       if (numToCheck % checkingValue == 0){
         false
@@ -100,7 +112,7 @@ object Functions extends App {
       true
     }
 
-  println(primeChecker(15485863))
+  println(primeChecker(982451653))
 
 }
 
