@@ -61,14 +61,18 @@ class TheNovel(name:String, yearRel:Int, author:TheWriter){
   def copy(newYear:Int): TheNovel = TheNovel(this.name, newYear, this.author)
 }
 
+// Novel: name, year of release, author -> Instance of type Writer
+  // - authorAge -> Age of author at year of release
+  // - isWrittenBy(author)
+  // - copy (new year of release) = returns new instance of Novel with new year of release
+
 class TheCounter(start:Int){
+  def currentCount(): Int = this.start
+  def crement(value:Int, incDec:String): TheCounter = {
+    if(incDec == "inc") TheCounter(value + 1) else TheCounter(value - 1)
+  }
 
 }
-
-  // Novel: name, year of release, author -> Instance of type Writer
-    // - authorAge -> Age of author at year of release
-    // - isWrittenBy(author)
-    // - copy (new year of release) = returns new instance of Novel with new year of release
 
 // Counter class
   // Receives int
