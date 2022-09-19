@@ -1,6 +1,7 @@
 package lectures.part1basics
 
 import scala.annotation.tailrec
+import scala.math.sqrt
 
 object Recursion extends App {
 
@@ -28,8 +29,19 @@ object Recursion extends App {
 
 
   // 2. isPrime with tail recursion
-  def isPrimeTail(num: Int): Boolean =
-    @tailrec
-    true
+
+
+//  def primeChecker(num: Int, checkingValue: Int = 2): Boolean =
+//    if (checkingValue <= sqrt(num)) & (num % checkingValue == 0) {
+//      false
+//    }
+//    else if (checkingValue <= sqrt(num)) {
+//        primeChecker(num, checkingValue + 1)
+//      }
+//    else true
+//  def isPrimeTail(num: Int): Boolean =
+//    @tailrec
+//    //
+//    true
 
 }

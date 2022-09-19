@@ -7,11 +7,11 @@ object ValuesVariablesTypes extends App {
 
 //  x = 2 // You can't reassign the value of a Val, they're immutable
 
-  val y = 42 // Compilter can infer types
+  val y = 42 // Compiler can infer types
   println(y)
 
   val aString: String = "Strings are denoted by double-quotes"
-  println(aString); // The semicolon is unncessary
+  println(aString); // The semicolon is unnecessary
 
   val aBoolean: Boolean = true
   val aChar: Char = 'a' // Denoted by a single quote
